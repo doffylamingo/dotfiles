@@ -1,0 +1,139 @@
+// -*- mode: jsonc -*-
+{
+    "layer": "bottom",
+    "height": 30,
+    "spacing": 5,
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [],
+    "modules-right": [
+        "tray",
+        //	    "idle_inhibitor",
+        //	    "power-profiles-daemon",
+        "pulseaudio",
+        "network",
+        "battery",
+        "backlight",
+        "clock",
+        "custom/notification"
+        //	    "custom/power"
+    ],
+    "hyprland/window": {
+        "separate-outputs": true
+    },
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-click": "activate"
+    },
+    "tray": {
+        "spacing": 10
+    },
+    "clock": {
+        "timezone": "PST",
+        // "tooltip-format": "{:%A, %B %d, %Y}",
+        "tooltip-format": "{:%Y,  %d %B,  %A   %I:%M %p}",
+        "format": "{:%H:%M}"
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}",
+        "format-icons": [
+            "󰂎",
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
+        ],
+        "format-charging": "󰂄",
+        "format-warning": "󰂃 {capacity}%",
+        "tooltip-format": "{capacity}% capacity"
+    },
+    "network": {
+        "format-wifi": "󰤨",
+        "format-disconnected": "󰤭",
+        "tooltip-format": "Connected to {essid}",
+        "on-click": "hyprctl dispatch exec '[float]' 'kitty -e nmtui-connect'"
+    },
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-muted": "󰖁",
+        "format-icons": {
+            "default": [
+                "",
+                "",
+                "󰕾"
+            ]
+        },
+        "tooltip-format": "{volume}% volume",
+        "on-click": "pavucontrol"
+    },
+    "custom/power": {
+        "format": "󰐥",
+        "on-click": "sleep 0.15 && powermenu"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "backlight": {
+        "format": "{icon}",
+        "tooltip": true,
+        "tooltip-format": "{percent}% brightness",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        }
+    },
+    "custom/notification": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "<span foreground='red'><sup></sup></span>",
+            "none": "",
+            "dnd-notification": "<span foreground='red'><sup></sup></span>",
+            "dnd-none": "",
+            "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+            "inhibited-none": "",
+            "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+            "dnd-inhibited-none": ""
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    }
+}
