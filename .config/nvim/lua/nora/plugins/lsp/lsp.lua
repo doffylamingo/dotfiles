@@ -252,13 +252,12 @@ return {
 
 		require("mason-tool-installer").setup({
 			ensure_installed = {
-				"prettier",
+				"prettierd",
 				"stylua",
 				"isort",
 				"black",
 				"pylint",
 				"eslint_d",
-				"rustfmt",
 				"gofumpt",
 				"golines",
 				"goimports-reviser",
