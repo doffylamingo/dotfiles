@@ -1,9 +1,9 @@
-alias yeet="yay -Rcs"
+alias yeet="yay -Rnsu"
 alias vim=nvim
 alias vi=nvim
 alias v=nvim
 alias cat="bat --color always --plain"
-alias ls="eza --color=auto -x"
+alias ls='eza -lh --group-directories-first'
 alias ll="ls -l"
 alias la="ls -al"
 alias lt="ls --tree"
@@ -13,4 +13,7 @@ alias cp="cp -vr"
 alias rm="rm -vr"
 alias cw="change-wallpaper.sh"
 alias ..="cd .."
+alias ...='cd ../..'
+alias ....='cd ../../..'
 alias pnpx="pnpm dlx"
+alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
