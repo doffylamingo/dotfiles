@@ -1,6 +1,6 @@
 configuration {
   modi: "drun";
-  font: "Lexend Medium 16px";
+  font: "Iosevka 14";
   show-icons: true;
   terminal: "kitty";
   icon-theme: "Papirus";
@@ -23,4 +23,4 @@ configuration {
   }
 }
 
-@theme "cat-mocha"
+@theme "matugen-theme"

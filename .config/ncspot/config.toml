@@ -1,0 +1,13 @@
+use_nerdfont = true
+flip_status_indicators = true
+notify = true
+library_tabs = ["tracks", "playlists", "browse"]
+hide_display_names = false
+statusbar_format = "%title - %artists"
+
+[track_format]
+left = "%title - %artists"
+
+[keybindings]
+"Space"="playpause"
+

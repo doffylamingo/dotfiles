@@ -1,0 +1,54 @@
+@import "../themes/colors.rasi"
+
+* {
+	background-color: #0A090A;
+}
+
+window {
+	children: [ horibox ];
+	border: 2px solid;
+	border-color: @primary;
+	border-radius: 8px;
+	padding: 10px;
+	width: 1200px;
+	background-color: #0A090A;
+}
+
+horibox {
+	orientation: horizontal;
+	children: [ entry, listview ];
+	spacing: 10px;
+}
+
+entry {
+	enabled: false;
+}
+
+listview {
+	spacing: 5;
+	columns: 3;
+	lines: 3;
+	fixed-columns: true;
+	fixed-height: true;
+	children: [element-icon];
+}
+
+element {
+	border: 2px solid;
+	border-radius: 6px;
+	padding: 8px;
+	children: [ element-icon ];
+}
+
+element-icon {
+	expand: true;
+	size: 50%;
+	margin: -85 0;
+}
+
+element selected {
+	border-color: @primary;
+	text-color: @on-primary-container;
+}
+
+

@@ -22,7 +22,7 @@
 # The number of bars (0-200). 0 sets it to auto (fill up console).
 # Bars' width and space between bars in number of characters.
 ; bars = 0
-bar_width = 1.5
+bar_width = 2
 ; bar_spacing = 1
 
 # For SDL width and space between bars is in pixels, defaults are:
@@ -141,12 +141,12 @@ bar_width = 1.5
 gradient = 1
 gradient_count = 6
 
-gradient_color_6 = '#1A1009'
-gradient_color_5 = '#4E321F'
-gradient_color_4 = '#5F5B4D'
-gradient_color_3 = '#644A34'
-gradient_color_2 = '#916F54'
-gradient_color_1 = '#A0A194'
+gradient_color_6 = '#EA61DE'
+gradient_color_5 = '#E22DD9'
+gradient_color_4 = '#9B24F0'
+gradient_color_3 = '#C73CB4'
+gradient_color_2 = '#A424A0'
+gradient_color_1 = '#751FDC'
 
 
 [smoothing]
