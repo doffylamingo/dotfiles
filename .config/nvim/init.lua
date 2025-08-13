@@ -1,1 +1,1 @@
-require("nora.core")
+require("core")
