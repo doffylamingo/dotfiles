@@ -73,7 +73,7 @@ alias yeet="yay -Rns"
 alias vim=nvim
 alias vi=nvim
 alias v=nvim
-alias cat="bat --color always --plain"
+alias cat="bat --color always"
 alias ls='eza -lh --group-directories-first'
 alias ll="ls -l"
 alias la="ls -al"
@@ -102,10 +102,14 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # nvm
-export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# go
-export PATH="$HOME/go/bin:$PATH"
-export PATH="$HOME/scripts:$PATH"
+# pnpm
+export PNPM_HOME="/home/nora/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

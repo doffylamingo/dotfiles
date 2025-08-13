@@ -20,9 +20,8 @@ if [[ -n "$SELECTED_IMG" ]]; then
     sed -i "/gradient_color_6/c\gradient_color_6 = '$color6'" ~/.config/cava/config
 
     pkill -USR2 cava
-    pkill -SIGUSR1 kitty
 
     ags quit -i Xebec
-    ags run $HOME/dotfiles/.config/xebec
+    ags run $HOME/.config/xebec
 
 fi

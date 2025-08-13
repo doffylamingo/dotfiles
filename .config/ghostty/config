@@ -1,0 +1,30 @@
+theme = Adventure
+# theme = Kanagawa Dragon
+# theme = IC_Orange_PPL
+background = 090A09
+# background-opacity = 0.85
+
+shell-integration = zsh
+shell-integration-features = no-cursor,no-sudo,no-title
+gtk-titlebar = false
+cursor-style = block
+
+font-family = Iosevka
+# font-style = Bold
+font-size = 14
+font-feature = +liga, +calt, +dlig
+
+window-padding-x = 4 
+window-padding-y = 4 
+window-padding-balance = true
+
+gtk-single-instance = true
+
+keybind = alt+left=text:\x1bb
+keybind = alt+right=text:\x1bf
+
+keybind = ctrl+backspace=text:\x1bd
+keybind = ctrl+right=text:\x05
+
+keybind = ctrl+left=text:\x01
+keybind = alt+backspace=text:\x17
