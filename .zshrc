@@ -43,7 +43,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Environment Variables
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -61,7 +60,7 @@ export XDG_TEMPLATES_DIR="$HOME/Templates"
 export XDG_PUBLICSHARE_DIR="$HOME/Public"
 export XDG_VIDEOS_DIR="$HOME/Videos"
 
-export TERMINAL=kitty
+export TERMINAL=foot
 export EDITOR=nvim visudo
 export VISUAL=nvim visudo
 export SUDO_EDITOR=nvim
@@ -89,7 +88,6 @@ alias pnpx="pnpm dlx"
 
 # Shell integrations
 eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
 
 # Prompt
 export PROMPT="[%n@%m %F{blue}%(5~|%-1~/.../%3~|%4~)%f]$ "
