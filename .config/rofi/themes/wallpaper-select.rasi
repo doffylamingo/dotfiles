@@ -1,14 +1,14 @@
-@import "../themes/colors.rasi"
+@import "../styles/colors.rasi"
 
 * {
-	background-color: #0A090A;
+    background-color: #0A090A;
+    primary: #FFFFFF;
 }
 
 window {
 	children: [ horibox ];
 	border: 2px solid;
 	border-color: @primary;
-	border-radius: 8px;
 	padding: 10px;
 	width: 1200px;
 	background-color: #0A090A;
@@ -35,7 +35,6 @@ listview {
 
 element {
 	border: 2px solid;
-	border-radius: 6px;
 	padding: 8px;
 	children: [ element-icon ];
 }
@@ -48,7 +47,4 @@ element-icon {
 
 element selected {
 	border-color: @primary;
-	text-color: @on-primary-container;
 }
-
-
